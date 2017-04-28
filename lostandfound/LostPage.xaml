@@ -8,8 +8,7 @@
 		</StackLayout>
 		<Grid x:Name="DataGrid">
 			<Grid.RowDefinitions>
-				<RowDefinition Height="7.5*"/>
-				<RowDefinition Height="1.5*"/>
+				<RowDefinition Height="8.5*"/>
 				<RowDefinition Height="1.5*"/>
 			</Grid.RowDefinitions>
 			<Image x:Name="selectedimage" Grid.Row="0" Margin="5,5,5,5"/>
@@ -17,8 +16,8 @@
 				<Label Text="Welcome to Airport Lost Page" HorizontalOptions="Center"/>
 				<Label Text="To Start, Click the Browse Photo Button Below" HorizontalOptions="Center"/>
 			</StackLayout>
-			<Button x:Name="TakePhotoButton" BackgroundColor="#3F51B5" TextColor="White" Clicked="BrowsePhoto" Text="Browse Photo" Grid.Row="1" Margin="10,10,10,0"/>
-			<Button x:Name="GetResultButton" BackgroundColor="#3F51B5" TextColor="White" Clicked="GetResult" Text="Get Result" IsVisible="false" Grid.Row="1" Margin="10,10,10,0"/> 
+			<Button x:Name="TakePhotoButton" BackgroundColor="#3F51B5" TextColor="White" Clicked="BrowsePhoto" Text="Browse Photo" Grid.Row="1" Margin="10,10,10,10"/>
+			<Button x:Name="GetResultButton" BackgroundColor="#3F51B5" TextColor="White" Clicked="GetResult" Text="Get Result" IsVisible="false" Grid.Row="1" Margin="10,10,10,10"/> 
 		</Grid>
 	</Grid>
 	</ContentPage.Content>
