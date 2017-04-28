@@ -3866,6 +3866,9 @@ namespace lostandfound.Droid
 			// aapt resource value: 0x7f09002a
 			public const int Theme_Design_NoActionBar = 2131296298;
 			
+			// aapt resource value: 0x7f090175
+			public const int Theme_InterstitialZygote = 2131296629;
+			
 			// aapt resource value: 0x7f090000
 			public const int Theme_MediaRouter = 2131296256;
 			
@@ -3877,9 +3880,6 @@ namespace lostandfound.Droid
 			
 			// aapt resource value: 0x7f090003
 			public const int Theme_MediaRouter_LightControlPanel = 2131296259;
-			
-			// aapt resource value: 0x7f090175
-			public const int Theme_Splash = 2131296629;
 			
 			// aapt resource value: 0x7f090127
 			public const int ThemeOverlay_AppCompat = 2131296551;
