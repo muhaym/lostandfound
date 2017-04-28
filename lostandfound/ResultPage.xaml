@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Related Items Found" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="lostandfound.ResultPage">
+	<ContentPage.Content>
+		<Grid>
+			<ListView HasUnevenRows="true" x:Name="resultList" CachingStrategy="RecycleElement">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+					 	<ViewCell>
+							<ViewCell.ContextActions>
+            					<MenuItem Clicked="Claim" CommandParameter="{Binding .}" Text="Claim" />
+							</ViewCell.ContextActions>
+							<StackLayout Margin="5">
+							<Image Source="{Binding image}" HorizontalOptions="FillAndExpand" HeightRequest="150"/>
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>

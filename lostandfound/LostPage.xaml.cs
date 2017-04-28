@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using Plugin.Connectivity;
 using Plugin.Media;
 using Xamarin.Forms;
 
@@ -29,7 +30,7 @@ namespace lostandfound
 		    if (file == null)
 		        return;
 
-		    await DisplayAlert("File Location", file.Path, "OK");
+		    //await DisplayAlert("File Location", file.Path, "OK");
 			Intro.IsVisible = false;
 			TakePhotoButton.IsVisible = false;
 			GetResultButton.IsVisible = true;
@@ -45,7 +46,37 @@ namespace lostandfound
 
 		async void GetResult(object sender, System.EventArgs e)
 		{
-			
+			loading.IsVisible = true;
+			DataGrid.IsVisible = false;
+			if (await CrossConnectivity.Current.IsRemoteReachable("http://52.172.50.65/", msTimeout: 5000))
+			{
+				if (memstream != null)
+				{
+					if (memstream.CanSeek)
+					{
+						memstream.Position = 0;
+					}
+					var result = await PictureUpload.lostPost(memstream);
+					if (result.status == 100)
+					{
+						await Navigation.PushAsync(new ResultPage(result), true);
+					}
+					else
+					{
+						await DisplayAlert("Error", result.message, "OK");
+					}
+				}
+				else
+				{
+					await DisplayAlert("Error", "File can't be accessed", "OK");
+				}
+			}
+			else
+			{
+				await DisplayAlert("Error", "Cannot access Internet", "OK");
+			}
+			loading.IsVisible = false;
+			DataGrid.IsVisible = true;
 		}
 	}
 }
