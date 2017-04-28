@@ -24,8 +24,7 @@
 	<style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
 		<item name="colorAccent">#FF4081</item>
 	</style>
-
-	 <?xml version="1.0" encoding="utf-8"?>
+	
     <style name="Theme.InterstitialZygote" parent="android:Theme.AppCompat.Light.NoActionBar">
       <item name="android:windowActionBar">false</item>
       <item name="android:windowTitleSize">0dp</item>
