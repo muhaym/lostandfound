@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Lost Page" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="lostandfound.LostPage">
+	<ContentPage.Content>
+		<Grid>
+		<StackLayout x:Name="loading" HorizontalOptions="Center" IsVisible="false"  VerticalOptions="Center">
+			<ActivityIndicator IsRunning="true"  HeightRequest="40" WidthRequest="40"/>
+			<Label Text="Please hold on while we load the result!"/>
+		</StackLayout>
+		<Grid x:Name="DataGrid">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="7.5*"/>
+				<RowDefinition Height="1.5*"/>
+				<RowDefinition Height="1.5*"/>
+			</Grid.RowDefinitions>
+			<Image x:Name="selectedimage" Grid.Row="0" Margin="5,5,5,5"/>
+			<StackLayout x:Name="Intro" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center">
+				<Label Text="Welcome to Airport Lost Page" HorizontalOptions="Center"/>
+				<Label Text="To Start, Click the Browse Photo Button Below" HorizontalOptions="Center"/>
+			</StackLayout>
+			<Button x:Name="TakePhotoButton" BackgroundColor="#3F51B5" TextColor="White" Clicked="BrowsePhoto" Text="Browse Photo" Grid.Row="1" Margin="10,10,10,0"/>
+			<Button x:Name="GetResultButton" BackgroundColor="#3F51B5" TextColor="White" Clicked="GetResult" Text="Get Result" IsVisible="false" Grid.Row="1" Margin="10,10,10,0"/> 
+		</Grid>
+	</Grid>
+	</ContentPage.Content>
+</ContentPage>

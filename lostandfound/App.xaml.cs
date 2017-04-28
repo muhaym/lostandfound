@@ -8,7 +8,7 @@ namespace lostandfound
 		{
 			InitializeComponent();
 
-			MainPage = new lostandfoundPage();
+			MainPage = new NavigationPage(new lostandfoundPage() { Title = "Airport L&F" });
 		}
 
 		protected override void OnStart()
