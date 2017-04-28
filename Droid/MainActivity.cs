@@ -17,9 +17,8 @@ namespace lostandfound.Droid
 		{
 			TabLayoutResource = Resource.Layout.Tabbar;
 			ToolbarResource = Resource.Layout.Toolbar;
-
-			base.OnCreate(bundle);
 			base.SetTheme(Resource.Style.MyTheme);
+			base.OnCreate(bundle);
 			global::Xamarin.Forms.Forms.Init(this, bundle);
 
 			LoadApplication(new App());
