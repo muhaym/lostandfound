@@ -59,6 +59,7 @@ namespace lostandfound
 					var result = await PictureUpload.lostPost(memstream);
 					if (result.status == 100)
 					{
+						await DisplayAlert("Success", "Found class = " + result.prediction, "OK");
 						await Navigation.PushAsync(new ResultPage(result), true);
 					}
 					else

@@ -58,7 +58,7 @@ namespace lostandfound
 					var result = await PictureUpload.foundPost(memstream);
 					if (result.status == 100)
 					{
-						await DisplayAlert("Success", "Submitted your Image to found database successfully, Thankyou!", "OK");
+						await DisplayAlert("Success", "Submitted your Image to found database successfully, Thankyou!\n Identified Class = "+result.prediction, "OK");
 						await Navigation.PopToRootAsync(true);
 					}
 					else
